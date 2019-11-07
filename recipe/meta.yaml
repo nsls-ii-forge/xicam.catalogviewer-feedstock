@@ -1,0 +1,38 @@
+{% set name = "xicam.catalogviewer" %}
+{% set version = "1.0.0" %}
+{% set sha256 = "06a4d66d9fada65bc97d04e108af60323b929d5ca059bb110277f1fa706faacf" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: https://github.com/synchrotrons/Xi-cam.CatalogViewer/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  noarch: "python"
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv "
+
+requirements:
+  host:
+    - python >=3.6
+    - pip
+  run:
+    - python >=3.6
+    - databroker
+    - pyqt >=5
+
+test:
+  imports:
+    - xicam.catalog_viewer
+
+about:
+  home: "https://github.com/synchrotrons/Xi-cam.CatalogViewer"
+  license: BSD 3-clause
+  license_family: BSD
+  license_file: LICENSE.md
+  summary: The CAMERA platform for synchrotron data management, visualization, and reduction.
+  description: |
+    A light plugin for a simple view of catalog contents independent of technique.
