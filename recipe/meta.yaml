@@ -24,10 +24,6 @@ requirements:
     - databroker
     - pyqt >=5
 
-test:
-  imports:
-    - xicam.catalog_viewer
-
 about:
   home: "https://github.com/synchrotrons/Xi-cam.CatalogViewer"
   license: BSD 3-clause
