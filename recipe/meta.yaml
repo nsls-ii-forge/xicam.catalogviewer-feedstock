@@ -1,6 +1,6 @@
 {% set name = "xicam.catalogviewer" %}
-{% set version = "1.0.0" %}
-{% set sha256 = "06a4d66d9fada65bc97d04e108af60323b929d5ca059bb110277f1fa706faacf" %}
+{% set version = "1.0.1" %}
+{% set sha256 = "afce939c1b6e9d84e9a26d2398a7d6b206ba0ab56b066aba75811853f12f9da2" %}
 
 package:
   name: "{{ name|lower }}"
