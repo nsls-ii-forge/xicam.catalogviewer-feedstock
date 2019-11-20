@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: "python"
   script: "{{ PYTHON }} -m pip install . --no-deps -vv "
 
@@ -21,6 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.6
+    - bluesky-browser >=0.1.0a7
     - databroker
     - pyqt >=5
 
